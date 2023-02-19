@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+int is_perfect_number(long long num)
+{
+    int count=1;
+    for(int itr=2; itr<=sqrt(num); itr++)
+    {
+        if (num%itr==0)
+        {
+            count=count+itr;
+            count=count+(num/itr);
+        }
+    }
+    return count;
+}
+int main()
+{
+    int num,count=0;
+    scanf("%d",&num);
+    count= is_perfect_number(num);
+    (count==num)?printf("Yes"):printf("No");
+}
