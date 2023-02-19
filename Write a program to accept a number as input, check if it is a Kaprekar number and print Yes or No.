@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<math.h>
+long long reverse_num(long long num)
+{
+    int rev=0,b=0;
+    while(num>0)
+    {
+        b=num%10;
+        rev=rev*10+b;
+        num=num/10;
+    }
+    return rev;
+}
+int main ()
+{
+    long long int sqr,right_num=0,value,number=0,newnum=0,newvalue=0,count=0,count1=0;
+    scanf("%lld",&value);
+    sqr=pow(value,2);
+    long long sqrnum=sqr;
+    while(sqr>0)
+    {
+        count++;
+        sqr/=10;
+    }
+   right_num=ceil(count/2.0);
+    while(right_num!=count1)
+    {
+        number=sqrnum%10;
+        newnum=newnum*10+number;
+        count1++;
+        sqrnum/=10;
+    }
+    newnum=reverse_num(newnum);
+    (sqrnum+newnum==value)?printf("Yes"):printf("No");
+}
