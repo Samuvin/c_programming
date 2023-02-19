@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    long long int num,s=2,count=0;
+    scanf("%lld",&num);
+    while(num>1)
+    {
+        if(num%s==0)
+        {
+            count++;
+            num=num/s;
+        }
+        else 
+        {s++;}
+        
+    }
+    printf("%lld",count);
+}
