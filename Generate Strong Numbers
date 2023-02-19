@@ -1,0 +1,31 @@
+#include<stdio.h>
+long long find_factorial(long long num)
+{
+    long long int fact=0,product=1,b=0;
+    long long int value=num;
+    while(num>0)
+    {
+        b=num%10;
+        product=1;
+        for(long long int i=1;i<=b;i++)
+        {
+            product=product*i;
+        }
+        num=num/10;
+        fact=fact+product;
+        
+    }
+    if(fact==value)
+    {
+        printf("%lld ",fact);
+    }
+}
+int main()
+{
+    long long int start,end;
+    scanf("%lld %lld",&start,&end);
+    for(long long int i=start;i<=end;i++)
+    {
+       find_factorial(i);
+    }
+}
