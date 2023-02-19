@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    char character;
+    scanf("%c",&character);
+    if(character>='a'&&character<='z')
+    {
+        printf("Yes");
+    }
+    else if (character>='A'&&character<='Z')
+    {
+        printf("Yes");
+    }
+    else{
+        printf("No");
+    }
+}
