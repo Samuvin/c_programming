@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main ()
+{ 
+    float f,a;
+    scanf("%f",&f);
+    a=(f-32)/1.8;
+    printf("%.2f",a);
+}
