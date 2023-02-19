@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int num,k;
+    scanf("%d",&num);
+    for(int i=1;i<=num;i++)
+    {
+        k=(i*2)-1;
+        for(int j=i;j<=num;j++,k=k+2)
+        {
+            printf("%d",k);
+        }
+        printf("\n");
+    }
+}
