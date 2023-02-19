@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<math.h>
+long long count_num(long long num)
+{
+    long long count=0;
+    while(num>0)
+    {
+        count++;
+        num/=10;
+    }
+    return count;
+}
+long long disarium_num(long long num)
+{
+    long long rem=0,val=0,power=0,ans=0;
+    power=count_num(num);
+    while(num>0)
+    {
+        val=num%10;
+        ans=ans+pow(val,power);
+        num/=10;
+        power--;
+    }
+    return ans;
+}
+int main()
+{
+    long long end;
+    scanf("%lld",&end);
+    for(int i=1;i<=end;i++)
+    {
+        if(disarium_num(i)==i)
+        printf("%d ",i);
+    }
+}
