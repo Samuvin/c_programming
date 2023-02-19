@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    long long int num,base,ans=0,power=0,val=0;
+    scanf("%lld %lld",&num,&base);
+    while(num>0)
+    {
+        val=num%10;
+        ans=ans+val*(pow(base,power));
+        power++;
+        num/=10;
+        
+    }
+    printf("%lld",ans);
+}
