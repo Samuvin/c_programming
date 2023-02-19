@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char num[30];
+    int temperory,i;
+    scanf("%s",num);
+    for(i=0;i<strlen(num);i+=2)
+    {
+        if(i+1<strlen(num))
+        {
+            temperory=num[i];
+            num[i]=num[i+1];
+            num[i+1]=temperory;
+            
+        }
+    }
+    printf("%s",num);
+    
+}
