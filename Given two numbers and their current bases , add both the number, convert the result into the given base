@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<math.h>
+long long decimal_conv(long long num,long long num2)
+{
+    long long power=0,ans=0,val=0;
+    while(num>0)
+    {
+        val=num%10;
+        ans=ans+(pow(num2,power)*val);
+        num/=10;
+        power++;
+    }
+    return ans;
+}
+long long decimal_base(long long num,long long num2)
+{
+    long long power=0,divide=1,digit=0;
+    while(num>0)
+    {
+        digit=num%num2;
+        power=(digit*divide)+power;
+        num=num/num2;
+        divide*=10;
+    }
+    return power;
+}
+int main()
+{
+    long long num1,num2,base1,base2,base3,sum=0,convert1=0,convert2=0,ans=0;
+    scanf("%lld %lld %lld %lld %lld",&num1,&num2,&base1,&base2,&base3);
+    convert1=decimal_conv(num1,base1);
+    convert2=decimal_conv(num2,base2);
+    sum=convert1+convert2;
+    ans=decimal_base(sum,base3);
+    printf("%lld",ans);
+}
