@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    long long int num,count=0,digit,number;
+    scanf("%lld %lld",&num,&number);
+    while(num>0)
+    {
+        digit=num%10;
+        if(digit==number)
+        count++;
+        num=num/10;
+    }
+    printf("%lld",count);
+}
