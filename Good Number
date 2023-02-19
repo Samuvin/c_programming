@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdbool.h>
+bool good_num(long long num,long long culp)
+{
+    long long val=0,digit=0,rem=0,sum=0;
+    digit=num%10;
+    sum=digit;
+    if(digit==culp)
+    {
+        return false;
+    }
+    num/=10;
+    while(num)
+    {
+        digit=num%10;
+        if(digit==culp||digit<=sum)
+        return false;
+        else
+        {
+            sum+=digit;
+            num/=10;
+        }
+    }
+    return true;
+}
+int main()
+{
+    long long int start,end,culp;
+    scanf("%lld %lld %lld",&start,&end,&culp);
+    for(long long i=start;i<=end;i++)
+    {
+        if(good_num(i,culp))
+        printf("%lld ",i);
+    }
+}
