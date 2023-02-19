@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<math.h>
+long long count_of_num(long long value)
+{
+    long long count=0;
+    while(value>0)
+    {
+        value/=10;
+        count++;
+    }
+    return count;
+}
+long long number_in_words(long long words)
+{
+    switch(words)
+    {
+    case 1:
+    printf("one ");
+    break;
+    case 2:
+    printf("two ");
+    break;
+    case 3:
+    printf("three ");
+    break;
+    case 4:
+    printf("four ");
+    break;
+    case 5:
+    printf("five ");
+    break;
+    case 6:
+    printf("six ");
+    break;
+    case 7:
+    printf("seven ");
+    break;
+    case 8:
+    printf("eight ");
+    break;
+    case 9:
+    printf("nine ");
+    break;
+    case 0:
+    printf("zero ");
+    break;
+    default:
+    break;
+    }
+}
+int main()
+{
+    long long integer,divide;
+    scanf("%lld",&integer);
+    long long count=count_of_num(integer);
+    count=count-1;
+    long long power=pow(10,count);
+    while(power>0)
+    {
+        divide=(integer/power)%10;
+        number_in_words(divide);
+        power/=10;
+        
+    }
+}
