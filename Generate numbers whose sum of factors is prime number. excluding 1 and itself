@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<math.h>
+void find_factors(long long num)
+{
+    long long sqr=0,sum=0,divi=0,flag=0;
+    sqr=sqrt(num);
+    for(int i=2;i<=sqr;i++)
+    {
+        if(num%i==0)
+        {
+            sum=sum+i+num/i;
+            
+        }
+    }
+    if(sqr*sqr==num)
+    {
+        sum=sum-sqr;
+    }
+    if(sum!=0)
+    {
+        flag=1;
+    for(int j=2;j<=sum/2;j++)
+    {
+        if(sum%j==0)
+        {
+            flag=0;
+            break;
+        }
+    }
+    if(flag==1)
+    printf("%lld ",num);
+    }
+}
+int main()
+{
+    long long int start,end;
+    scanf("%lld %lld",&start,&end);
+    if(start==1)
+    {
+        start++;
+    }
+    for(int i=start;i<=end;i++)
+    {
+        find_factors(i);
+    }
+}
