@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    long long nat_num,add=0,product=1;
+    scanf("%lld",&nat_num);
+    for(long long int i=1;i<=nat_num;i++)
+    {
+        product=product*i;
+        add=add+i;
+    }
+    (product%add==0)?printf("Yes"):printf("No");
+}
