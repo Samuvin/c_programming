@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    long long num,sum=1,sum2=1;
+    scanf("%lld",&num);
+    while(num>=0)
+    {
+        sum=num%100000;
+        sum2=num/100000;
+        break;
+        
+        
+    }
+    printf("%lld %lld",sum,sum2);
+    
+}
