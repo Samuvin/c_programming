@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    long long num,base,ans=0,value=0,di=1;
+    scanf("%lld %lld",&num,&base);
+    while(num!=0)
+    {
+        ans=num%base;
+        value=value+ans*di;
+        di*=10;
+        num=num/base;
+    }
+    printf("%lld",value);
+    
+    
+}
