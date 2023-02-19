@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>
+long long num_of_digits(long long num,long long num1,long long num2,long long num3)
+{
+    num=num-1;
+    long long start=pow(10,num);
+    long long end=(start*10)-1;
+    for(long long i=end;i>=start;i--)
+    {
+        if((i%num1==0)&&(i%num2==0)&&(i%num3==0))
+        {
+        return i;
+        break;
+        }
+    }
+}
+int main()
+{
+    long long num,num1,num2,num3;
+    scanf("%lld %lld %lld %lld",&num,&num1,&num2,&num3);
+    long long answer=num_of_digits(num,num1,num2,num3);
+    printf("%lld",answer);
+}
