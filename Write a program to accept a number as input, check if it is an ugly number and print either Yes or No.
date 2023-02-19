@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<stdbool.h>
+bool prime_number(long long num)
+{
+    if(num==2)
+    {
+        return true;
+    }
+    if(num==4)
+    {
+        return false;
+    }
+    for(long long i=3;i<=num/2;i++)
+    {
+        if(num%i==0)
+        {
+        return false;
+        break;
+        }
+    }
+    return true;
+}
+int main()
+{
+    long long num,fact=0;
+    scanf("%lld",&num);
+    for(long long int i=2;i<num;i++)
+    {
+        if(num%i==0 && prime_number(i)==true)
+        {
+            if(i!=2 && i!=3 && i!=5)
+            {
+                fact=1;
+                printf("No");
+                break;
+            }
+        }
+    }
+    if(fact==0)
+    {
+        printf("Yes");
+    }
+}
