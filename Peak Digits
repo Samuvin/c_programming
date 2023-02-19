@@ -1,0 +1,22 @@
+#include<stdio.h>
+long long count_num(long long num)
+{
+    long long int previous=-1,val=0,count=0;
+    while(num>0)
+    {
+        val=num%10;
+        if(val>previous)
+        {
+            count++;
+        }
+        previous=val;
+        num/=10;
+    }
+    printf("%lld",count-1);
+}
+int main()
+{
+    long long int num;
+    scanf("%lld",&num);
+    count_num(num);
+}
