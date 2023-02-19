@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int input;
+    scanf("%d",&input);
+    for(int row=1;row<=input;row++)
+    {
+        for(int column=1;column<=input;column++)
+        {
+            if(row==column)
+            printf("*");
+            else
+            printf("0");
+            
+            
+        }
+        printf("*");
+        for(int row2=input;row2>=1;row2--)
+        {
+            if(row2==row)
+            printf("*");
+            else
+            printf("0");
+        }
+        printf("\n");
+    }
+}
+
