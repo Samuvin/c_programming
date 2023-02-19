@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int start,end,a,i,flag;
+    scanf("%d %d",&start,&end);
+    for(i=start;i<=end;i++)
+    {
+        if((i==1) || (i==0)) 
+        {
+            continue;
+        }
+        flag=1;
+        for(a=2;a<=i/2;a++)
+        {
+            if(i%a==0)
+            {
+                flag=0;
+                break;
+            }
+        }
+        
+    if(flag==1)
+    printf("%d ",i);
+    }
+    
+   
+}
