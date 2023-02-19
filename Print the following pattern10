@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int num,sp=2;
+    scanf("%d",&num);
+    for(int col=1;col<=num;col++)
+    {
+        for(int row=1;row<=col;row++)
+        {
+            printf("%d",row);
+        }
+        for(int spac=1;spac<=num-col;spac++)
+        {
+            printf("0");
+        }
+        for(int spa=2;spa<=num-col;spa++)
+        {
+            printf("0");
+        }
+        for(int val=col;val>=1;val--)
+        {
+            if(val<num)
+            printf("%d",val);
+        }
+        printf("\n");
+    }
+}
