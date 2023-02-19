@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    long long int num,rep_digits,replacable_value,count=0;
+    scanf("%lld %lld %lld",&num,&rep_digits,&replacable_value);
+    int value[30];
+    while(num>0)
+    {
+        value[count]=num%10;
+        count++;
+        num=num/10;
+    }
+    for(int i=0;i<count;i++)
+    {
+        if(value[i]==rep_digits)
+        value[i]=replacable_value;
+    }
+    for(int j=count-1;j>=0;j--)
+    {
+        printf("%d",value[j]);
+    }
+    
+    
+}
