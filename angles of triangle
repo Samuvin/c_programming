@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,c;
+    scanf("%d %d %d",&a,&b,&c);
+    if(a<90)
+    {
+        printf("Acute");
+    }
+    else if(a==90)
+    {
+        printf("Right Angle");
+    }
+    else 
+    {
+        printf("Obtuse");
+    }
+}
