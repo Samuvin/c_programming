@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int num,sum=0,newnum=0,sum2=0;
+    scanf("%d",&num);
+    int value=num;
+    int sqr=sqrt(num);
+    for(int i=1;i<=sqr;i++)
+    {
+        if(value%i==0)
+        {
+            sum=sum+i+value/i;
+        }
+        
+    }
+    if(sqr*sqr==value)
+    {
+     sum=sum-sqr;   
+    }
+    while(sum>0)
+    {
+        newnum=sum%10;
+        if(newnum%2!=0)
+        {
+            sum2=sum2+newnum;
+        }
+        sum=sum/10;
+    }
+    printf("%d",sum2);
+}
