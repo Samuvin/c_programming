@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    float a;
+    scanf("%f",&a);
+    if((float)a>=91)
+    {
+        printf("A");
+    }
+    else if(76<=a&&a<=90)
+    {
+        printf("B");
+    }
+    else if(61<=a&&a<=75)
+    {
+        printf("C");
+    }
+    else
+    {
+        printf("D");
+    }
+}
