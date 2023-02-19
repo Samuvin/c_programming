@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int num,sqr,root,sum=0,j;
+    scanf("%d",&num);
+    sqr=sqrt(num);
+    for(int i=1;i<=sqr;i++)
+    {
+        if(num%i==0)
+        {
+            sum=sum+i;
+            if(i*i==num)
+            {
+                sum=sum-num;
+            }
+            else
+            {
+                sum=sum+(num/i);
+            }
+        }
+        
+    }
+    for(int n=sum+1; ;n++)
+    {
+        root=sqrt(n);
+        int flag=1;
+        for(int j=2;j<=root;j++)
+        {
+            if(n%j==0)
+            {
+                flag=0;
+                break;
+            }
+        }
+        if(flag==1)
+        {
+            printf("%d",n);
+            break;
+        }
+        
+    }
+}
