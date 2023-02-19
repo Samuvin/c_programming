@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int a,num,digit,sum=0;
+    float average;
+    scanf("%d",&num);
+    for(digit=1;digit<=num;digit++)
+    {
+        scanf("%d",&a);
+        sum=sum+a;
+        
+        
+    }
+    average=(float)sum/num;
+    printf("%.2f",average);
+}
+    
