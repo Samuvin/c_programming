@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<math.h>
+long long find_odd_num(long long num)
+{
+    long long sum=0,b=0;
+    while(num>0)
+    {
+    b=num%10;
+    if(b%2!=0)
+    sum=sum+b;
+    num/=10;
+    }
+    return sum;
+}
+int main()
+{
+    long long query,num_one,num_two,sum=0,sqr=0,divi2=0;
+    scanf("%lli",&query);
+    for(int i=1;i<=query;i++)
+    {
+        scanf("%lli",&num_one);
+        sum=0;
+        sqr=sqrt(num_one);
+        for(int j=1;j<=sqr;j++)
+        {
+            if(num_one%j==0)
+            {
+                divi2=num_one/j;
+                sum=sum+(find_odd_num(j))+find_odd_num(divi2);
+            }
+            
+        }
+        printf("%lli\n",sum);
+        
+    }
+    
+    
+}
