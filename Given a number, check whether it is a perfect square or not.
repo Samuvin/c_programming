@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int a,num,i;
+    scanf("%d",&a);
+    int flag;
+    for(i=2;i<=a;i++)
+    {
+        if(a==i*i)
+        {
+            flag=1;
+            break;
+        }
+        
+        
+    }
+    if(flag==1)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
+    
+}
+    
