@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int num1,first=0,last,n1=0,answer,sum=1,i=1,sum1;
+    scanf("%d",&num1);
+    last=num1%10;
+    first=num1;
+    while(num1!=0)
+    { 
+        answer=num1%10;
+        sum=sum*i;
+        num1=num1/10;
+        i=10;
+        
+    }
+    
+    
+    
+    printf("%d %d",(first/sum),last);
+}
