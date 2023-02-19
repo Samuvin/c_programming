@@ -1,0 +1,28 @@
+#include<stdio.h>
+#define Max(A,B) (A)==(B)?printf("Equal"):("Not Equal")
+int main()
+{
+    int num1,num2,eq;
+    scanf("%d %d",&num1,&num2);
+    Max(num1,num2);
+    printf("%d",eq);
+    
+}
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    scanf("%i %i",&a,&b);
+    if(a==b)
+    {
+        printf("Equal");
+    }
+    else
+    {
+        printf("Not equal");
+    }
+}
