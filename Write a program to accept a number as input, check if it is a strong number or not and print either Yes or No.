@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int num,num2,sum=0,fact,digit=0,count;
+    scanf("%d",&num);
+    num2=num;
+    while(num)
+    {
+        digit=num%10;
+        count=1;
+        fact=1;
+        while(count<=digit)
+        {
+            fact=fact*count;
+            count=count+1;
+        }
+        sum=sum+fact;
+        num=num/10;
+    }
+    
+   (num2==sum)?printf("Yes"):printf("No");
+    
+}
