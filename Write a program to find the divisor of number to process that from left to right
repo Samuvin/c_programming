@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int num,sum,count=1,i=1;
+    scanf("%d",&num);
+    while(num!=0)
+    { 
+        
+        sum=num%10;
+        count=count*i;
+        num=num/10;
+        i=10;
+    }
+    printf("%d",count);
+}
