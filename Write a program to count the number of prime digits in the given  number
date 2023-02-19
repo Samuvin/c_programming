@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    long long int num,i,answer,count=0;
+    scanf("%lld",&num);
+    while(num>1)
+    {
+        answer=num%10;
+        if(answer==2||answer==3||answer==5||answer==7||answer==9)
+        count=count+1;
+        num=num/10;
+        
+    }
+    printf("%lld",count);
+}
