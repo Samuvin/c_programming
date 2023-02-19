@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    long long int start,end,sum,product,i;
+    scanf("%lld %lld",&start,&end);
+    for( i=start;i<=end;i++)
+    {
+        sum=0;
+        product=1;
+        for(int j=1;j<=end;j++)
+        {
+            if(i%j==0)
+            {
+                sum=sum+j;
+                product=product*j;
+            }
+        }
+        if((product%sum==0)&&(i!=1))
+        {
+            printf("%lld ",i);
+        }
+    }
+        
+    
+}
