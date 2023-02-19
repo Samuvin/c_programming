@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    long long int num,even_digit=1,odd_digit=1,value=0,odd=0,even=0;
+    scanf("%lld",&num);
+    while(num>0)
+    {
+        value=num%10; // 2
+        if(value%2==1)
+        {
+            odd=value*odd_digit+odd;
+            odd_digit*=10;
+        }
+        else
+        {
+        even=value*even_digit+even; 
+        even_digit*=10;
+        }
+        num=num/10;
+        
+    }
+    printf("%lld",odd*even_digit+even);
+    
+}
