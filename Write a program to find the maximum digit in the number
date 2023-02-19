@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int num,sum=0,i,answer,r;
+    scanf("%d",&num);
+    while(num!=0)
+    {
+        answer=num%10;
+        if(answer>sum)
+        sum=answer;
+        num=num/10;
+    }
+    printf("%d",sum);
+}
+    
+    
+    
