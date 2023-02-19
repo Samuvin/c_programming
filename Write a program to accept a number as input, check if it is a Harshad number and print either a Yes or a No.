@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int num,num2,sum=0,digit=0;
+    scanf("%d",&num);
+    num2=num;
+    while(num>0)
+    {
+        digit=num%10;
+        sum=sum+digit;
+        num=num/10;
+    }
+    (num2%sum==0)?printf("Yes"):printf("No");
+    
+}
