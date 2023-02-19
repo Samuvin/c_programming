@@ -1,0 +1,20 @@
+#include<stdio.h>
+#define MAX(A,B) (A>B)?A:B
+#define MIN(C,D) (C<D)?C:D
+int main()
+{ 
+    int a,b,c,d,max,min,minmid,maxmid,greater;
+    scanf("%d %d %d %d",&a,&b,&c,&d);
+    max=MAX((MAX(a,b)),(MAX(c,d)));
+    min=MIN((MIN(a,b)),(MIN(c,d)));
+    minmid=MAX((MIN(a,b)),(MIN(c,d)));
+    maxmid=MIN((MAX(a,b)),(MAX(c,d)));
+    if(maxmid>minmid)
+    {
+        greater=maxmid;
+        maxmid=minmid;
+        minmid=greater;
+    }
+    printf("%d>%d>%d>%d",max,minmid,maxmid,min);
+}
+    
