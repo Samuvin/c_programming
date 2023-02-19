@@ -1,0 +1,7 @@
+include<stdio.h>
+int main ()
+{
+    char character [60];
+    fgets(character,60,stdin);
+    printf("%s", character);
+}
