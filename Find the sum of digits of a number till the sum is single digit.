@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main ()
+{
+    long long int num,sum=0,result,answer,answer2,sum2=0;
+    scanf("%lld",&num);
+    while(num!=0)
+    {
+        answer=num%10;
+        sum= sum+answer;
+        num=num/10;
+    }
+ 
+    
+    while(sum!=0)
+    {
+        answer2=sum%10;
+        sum2=sum2+answer2;
+        sum=sum/10;
+    }
+    printf("%lld",sum2);
+}
