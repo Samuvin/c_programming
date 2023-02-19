@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<math.h>
+long long Armstrong_number(long long num,long long count)
+{
+    int arm,b,value,power=0;
+    value=num;
+    while(num>0)
+    {
+        b=num%10;
+        power=power+pow(b,count);
+        num/=10;
+        
+    }
+    return power;
+    
+}
+long long count_num(long long num)
+{
+    int a=0,count=0;
+    while(num>0)
+    {
+    a=num%10;
+    count++;
+    num/=10;
+    }
+return count;
+    
+}
+int main ()
+{
+    long long int start,end,count=0,i,arm=0;
+    scanf("%lld %lld",&start,&end);
+    for(i=start;i<=end;i++)
+    {
+        count=count_num(i);
+        arm=Armstrong_number(i,count);
+        if(arm==i)
+        {
+        printf("%lld ",i);
+        }
+ 
+    }
+    
+}
+
+
