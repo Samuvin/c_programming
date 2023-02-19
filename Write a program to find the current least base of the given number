@@ -1,0 +1,23 @@
+#include<stdio.h>
+long long least_base(long long num)
+{
+    int previous=0,value;
+    while(num>0)
+    {
+        value=num%10;
+        if(value>previous)
+        {
+            previous=value;
+        }
+        num=num/10;
+    }
+    return previous;
+}
+int main()
+{
+    int num,answer;
+    scanf("%d",&num);
+    answer=least_base(num);
+    answer=answer+1;
+    printf("%d",answer);
+}
