@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if(a<150)
+    {
+        printf("Dwarf");
+            }
+            else if (a<=164&&a>=150)
+            {
+                printf("Avg Height");
+            }
+            else
+            {
+                printf("Tall");
+            }
+}
