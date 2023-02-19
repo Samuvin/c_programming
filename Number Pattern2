@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    for(int x=a;x>=1;x--)
+    {
+        for (int y=x;y<=a;y++)
+        {
+            printf("%d",y);
+        }
+        printf("\n");
+    }
+}
