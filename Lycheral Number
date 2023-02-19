@@ -1,0 +1,32 @@
+#include<stdio.h>
+long long int lych_algo(long long num)
+{
+    int reverse=0,digits;
+    while(num>0)
+    {
+        digits=num%10;
+        reverse=reverse*10+digits;
+        num=num/10;
+    }
+    return reverse;
+}
+int main()
+{
+    long long int num,itrend,rev;
+    scanf("%lld %lld",&num,&itrend);
+    rev=lych_algo(num);
+    for(int i=1;i<=itrend;i++)
+    {
+        rev=lych_algo(num);
+        num=num+rev;
+        if(lych_algo(num)==num)
+        {
+            printf("No");
+            break;
+        }
+    }
+    if(lych_algo(num)!=num)
+    {
+        printf("Yes");
+    }
+}
