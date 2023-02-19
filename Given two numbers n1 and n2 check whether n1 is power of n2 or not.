@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>
+long long power_or_not(long long base,long long expo)
+{
+    for(int i=1;i<=expo;i++)
+    {
+        if(pow(expo,i)==base)
+        {
+        return 1;
+        }
+    }
+    return 0;
+    
+}
+int main()
+{
+    long long num1,num2;
+    scanf("%lld %lld",&num1,&num2);
+    if(power_or_not(num1,num2))
+    printf("Yes");
+    else
+    printf("No");
+}
