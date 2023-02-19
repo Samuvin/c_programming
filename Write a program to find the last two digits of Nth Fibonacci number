@@ -1,0 +1,18 @@
+#include<stdio.h>
+void fibonacci_series(long long num)
+{
+    int val=0,num1=0,num2=1;
+    for(int i=1;i<=num;i++)
+    {
+        val=(num1+num2)%100;
+        num1=num2;
+        num2=val;
+    }
+    printf("The last two digit of %lldth Fibonacci number is %d",num,num1);
+}
+int main()
+{
+    long long num;
+    scanf("%lld",&num);
+    fibonacci_series(num);
+}
