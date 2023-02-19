@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int a,b,c,count,i,j,x;
+    scanf("%d %d %d",&a,&b,&c);
+    for(i=a;i<=b;i++)
+    {
+        x=sqrt(i);
+        count=0;
+        for(j=1;j<=x;j++)
+        {
+            if(i%j==0)
+            {
+                count=count+2;
+                if(j*j==i)
+                {
+                    count=count-1;
+                }
+            }
+        }
+        if(count>c)
+        {
+            printf("%d",i);
+            break;
+        }
+    }
+}
