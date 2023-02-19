@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int num,k=1;
+    scanf("%d",&num);
+    for(int i=1;i<=num;i++)
+    {
+        for(int j=num;j>=i;j--)
+        {
+            printf("%2d ",k++);
+        }
+        printf("\n");
+    }
+}
