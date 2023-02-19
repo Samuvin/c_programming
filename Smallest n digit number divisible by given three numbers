@@ -1,0 +1,25 @@
+#include<stdio.h>
+long long count_of_digits(long long num,long long num1,long long num2,long long num3)
+{
+    int power=1,power_end;
+    num=num-1;
+    for(int j=1;j<=num;j++)
+    {
+        power*=10;
+        
+    }
+    power_end=(power*10)-1;
+    for(int i=power;i<=power_end;i++)
+    {
+        if((i%num1==0)&&(i%num2==0)&&(i%num3==0))
+        return i;
+    }
+}
+int main()
+{
+    long long number,num1,num2,num3;
+    scanf("%lld %lld %lld %lld",&number,&num1,&num2,&num3);
+    long long answer=count_of_digits(number,num1,num2,num3);
+    printf("%lld",answer);
+    
+}
