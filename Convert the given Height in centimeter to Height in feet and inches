@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    float a,b,c;
+    scanf("%f",&a);
+    c=(float)a/2.54;
+    b=(float)a*0.0328;
+    printf("Inches is: %.2f\n",c);
+    printf("Feet is: %.2f\n",b);
+}
