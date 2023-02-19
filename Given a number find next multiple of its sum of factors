@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int num1,sum=0,sqr;
+    scanf("%d",&num1);
+    sqr=sqrt(num1);
+    for(int i=1; i<=sqr;i++)
+    {
+        
+        if(num1%i==0)
+        {
+            sum=sum+i;
+            if(i*i==num1)
+            {
+                sum=sum-i;
+            }
+            else
+            {
+                sum=sum+(num1/i);
+            }
+        }
+    
+    }sum=((sum/num1)+1)*num1;
+        printf("%d",sum);
+    
+    
+}
