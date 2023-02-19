@@ -1,0 +1,12 @@
+#include<stdio.h>
+#define Max(A,B) (A<B)?A:B
+#define  Min(C,D) (C>D)?C:D
+int main()
+{
+    int num1,num2,num3,first,second,third;
+    scanf("%d %d %d",&num1,&num2,&num3);
+    first=Max(num1,(Max(num2,num3)));
+    third=Min(num1,(Min(num2,num3)));
+    second=num1+num2+num3-(first+third);
+    printf("%d<%d<%d",first,second,third);    
+}
