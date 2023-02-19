@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    int num1,product,sum=1;
+    scanf("%d",&num1);
+    while(num1!=0)
+    {
+       product=num1%10;
+       sum=product*sum;
+       num1=num1/10;
+    }
+    printf("%d",sum);
+}
