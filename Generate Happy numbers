@@ -1,0 +1,29 @@
+#include<stdio.h>
+long long happy_number(long long num)
+{
+    long long int sum=0,b=0;
+    while(num>9)
+    {
+        sum=0;
+        while(num>0)
+        {
+        b=num%10;
+        sum=sum+b*b;
+        num=num/10;
+        }
+        num=sum;
+    }
+    return num;
+}
+int main()
+{
+    long long start,end;
+    scanf("%lld %lld",&start,&end);
+    for(long long int i=start;i<=end;i++)
+    {
+        if(happy_number(i)==1||happy_number(i)==7)
+        {
+            printf("%lld ",i);
+        }
+    }
+}
