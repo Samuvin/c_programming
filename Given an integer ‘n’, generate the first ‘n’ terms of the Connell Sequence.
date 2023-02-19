@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+    int con_num,odd_num=0,even_num=1,count1,count2=0,num;
+    scanf("%d",&con_num);
+    for(int i=1;i<=con_num;i++)
+    {
+        if(i%2!=0)
+        {
+            count1=0;
+            num=1+(odd_num*odd_num);
+            while(count2<=con_num && count1<i)
+            {
+                if(count2<con_num)
+                printf("%d ",num);
+                count1++;
+                count2++;
+                num+=2;
+            }
+            odd_num+=2;
+        }
+        else
+        {
+            count1=0;
+            num=1+(even_num*even_num);
+            while(count1<i&&count2<=con_num)
+            {
+                if(count2<con_num)
+                printf("%d ",num);
+                count1++;
+                count2++;
+                num+=2;
+            }
+            even_num+=2;
+        }
+        
+    }
+}
