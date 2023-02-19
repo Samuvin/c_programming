@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main()
+{
+    short int a;
+    scanf("%hd",&a);
+    printf("%c",a);
+}
