@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main ()
+{
+    long long int num,s=2;
+    scanf("%lld",&num);
+    while(num>1)
+    {
+        if(num%s==0)
+        {
+            printf("%lld ",s);
+            num=num/s;
+        }
+        else
+        s++;
+        
+    }
+        
+        
+    
+}
+    
