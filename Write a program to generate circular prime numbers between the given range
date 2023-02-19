@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<stdbool.h>
+#include<math.h>
+long long count_num(long long num)
+{
+    long long count=0,power=0;
+    while(num>0)
+    {
+        count++;
+        num/=10;
+    }
+    count-=1;
+    power=pow(10,count);
+    return power;
+    
+}
+bool is_prime(long long num)
+{
+    if(num==2)
+    {
+        return true;
+    }
+    for(int i=2;i<num;i++)
+    {
+        if(num%i==0)
+        {
+            return false;
+            break;
+        }
+    }
+    return true;
+}
+bool circular_prime(long long num)
+{
+    long long power=0,last_num=0,rem=0,temp=num;
+    power=count_num(num);
+    while(is_prime(num))
+        {
+            last_num=(num%10);
+            rem=num/10;
+            num=power*last_num+rem;
+            if(temp==num)
+            {
+                return true;
+            }
+        }
+        return false;
+}
+int main()
+{
+    long long start,end;
+    scanf("%lld %lld",&start,&end);
+    for(int i=start;i<=end;i++)
+    {
+        if(circular_prime(i))
+        printf("%d ",i);
+    }
+}
