@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int num1,num2,count1=1,count2=1;
+    scanf("%d %d",&num1,&num2);
+    for (int x=2; x<=num1/2; x++)
+    {
+        if (num1%x==0)
+        {
+            count1=count1+x;
+        }
+    }
+    int sqr2=sqrt(num2);
+    for (int i=2; i<=num2/2; i++)
+    {
+        if (num2%i==0)
+        {
+            count2=count2+i;
+        }
+    }
+    ((count1==num2)&&(count2==num1))?printf("Yes"):printf("No");
+}
