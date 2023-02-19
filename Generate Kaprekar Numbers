@@ -1,0 +1,75 @@
+/*#include<stdio.h>
+#include<math.h>
+long long reverse_num(long long num)
+{
+    int b=0,rev=0;
+    while(num>0)
+    {
+    b=num%10;
+    rev=rev*10+b;
+    num=num/10;
+    }
+    return rev;
+}
+long long count_num(long long num)
+{
+    int count=0,b=0;
+    while(num>0)
+    {
+    
+    count++;
+    num/=10;
+    }
+    return count;
+    
+}
+int main()
+{
+    long long int start,end,roundoff=0,reverse=0,count=0,count1=0,sqr=0,number=0,sqrnum=0,digit=0;
+    scanf("%lld %lld",&start,&end);
+    for(long long int i=start;i<=end;i++)
+    {
+        sqr=pow(i,2);
+        sqrnum=sqr;
+        count=count_num(sqr);
+        roundoff=ceil(count/2.0);
+        while(roundoff!=count1)
+        {
+            number=sqrnum%10;
+            digit=digit*10+number;
+            count1++;
+            sqrnum/=10;
+        }
+        digit=reverse_num(digit);
+        if(sqr+digit==i)
+        {
+            printf("%lld",i);
+        }
+        
+    }
+}*/
+#include<stdio.h>
+#include<math.h>
+long long count_num(long long num)
+{
+    long long count=0;
+    while(num>0)
+    {
+        num/=10;
+        count++;
+    }
+    return count;
+}
+int main()
+{
+    long long start,end;
+    scanf("%lld %lld",&start,&end);
+    for(int num=start;num<=end;num++)
+    {
+    long long count=count_num(num);
+    long long sqr_num=num*num;
+    long long power=pow(10,count);
+    if((sqr_num%power)+(sqr_num/power)==num)
+        printf("%d ",num);
+    }
+}
