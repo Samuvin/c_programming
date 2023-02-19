@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int num,row,col;
+    scanf("%d",&num);
+    int num1=num;
+    for(row=1;row<=num;row++)
+    {
+        for(col=row;col<=num;col++)
+        {
+            printf("%d",col);
+        }
+        for(int newcol=row-1;newcol>=1;newcol--)
+        {
+            if(row>1)
+            printf("%d",newcol);
+        }
+        printf("\n");
+    }
+}
