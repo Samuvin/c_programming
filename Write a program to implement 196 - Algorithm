@@ -1,0 +1,25 @@
+#include<stdio.h>
+long algo_algorithm(long num)
+{
+    long long int rev=0,digits;
+    while(num>0)
+    {
+        digits=num%10;
+        rev=rev*10+digits;
+        num=num/10;
+    }
+    return rev;
+    
+}
+int main()
+{
+    long long int num,value,reverse;
+    scanf("%lld",&num);
+    reverse=algo_algorithm(num);
+    while(algo_algorithm(num+reverse)!=num+reverse)
+    {
+        num=num+reverse;
+        reverse=algo_algorithm(num);
+    }
+    printf("%lld",num+reverse);
+}
