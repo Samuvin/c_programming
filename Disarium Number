@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<math.h>
+long long count_num(long long num)
+{
+    int count=0;
+    while(num>0)
+    {
+        count++;
+        num/=10;
+    }
+    return count;
+}
+long long disarium_num(long long num)
+{
+    long long val=0,rem=0,ans=0,count=0;
+    count=count_num(num);
+    while(num>0)
+    {
+       val=num%10;
+       ans=ans+pow(val,count);
+       num/=10;
+       count--;
+    }
+    return ans;
+}
+int main()
+{
+    long long int num;
+    scanf("%lld",&num);
+    if(disarium_num(num)==num)
+    printf("Yes");
+    else
+    printf("No");
+}
