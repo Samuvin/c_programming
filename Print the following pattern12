@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    int num,number=1,number2=0;
+    scanf("%d",&num);
+    for(int i=1;i<=num;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            printf("%d",number++);
+        }
+        number2=number-2;
+        {
+            for (int nxt=1;nxt<=i-1;nxt++)
+            {
+                printf("%d",number2--);
+            }
+        }
+        
+        printf("\n");
+    }
+}
