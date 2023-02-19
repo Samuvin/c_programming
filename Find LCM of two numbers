@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int num1,num2,greater,answer,flag=1;
+    
+    scanf("%d %d",&num1,&num2);
+    (num1>num2)?greater=num1:greater=num2;
+    
+    while(greater>0)
+    {
+        if(greater%num1==0 && greater%num2==0)
+        {
+            printf("%d",greater);
+            break;
+        }
+        else
+        {
+            greater++;
+        }
+    
+   
+}
+}
