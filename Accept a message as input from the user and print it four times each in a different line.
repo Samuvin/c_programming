@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main()
+{
+    char hel [100];
+    fgets(hel,100,stdin);
+    printf("%s\n%s\n%s\n%s",hel,hel,hel,hel);
+}
