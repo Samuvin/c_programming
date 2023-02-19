@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+int is_perfect_number(long long num)
+{
+    long long count=0;
+    if(num==1) return 0;
+    for (long long itr=1; itr<=sqrt(num); itr++)
+    {
+        if(num%itr==0)
+        {
+            count=count+itr;
+            count=count+(num/itr);
+        }
+    }
+    count = count-num;
+    return count==num;
+}
+int main()
+{
+    long long num1, num2, count=0;
+    scanf("%lld %lld",&num1,&num2);
+    for (long long int i=num1; i<=num2; i++)
+    {
+        if(is_perfect_number(i))
+        {
+            printf("%lld ",i);
+        }
+    }
+}
