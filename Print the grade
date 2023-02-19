@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    float a;
+    scanf("%f",&a);
+    if(a>=35)
+    {
+        printf("Pass");
+    }
+    else
+    {
+        printf("Fail");
+    }
+    
+}
