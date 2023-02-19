@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<math.h>
+long long power_num(long long num,long long num2)
+{
+    long long power=0;
+    power=pow(num,num2);
+    return power;
+}
+int main()
+{
+    long long num1,num2,kth,count=0,ans=0,previous=-1,value=0;
+    scanf("%lld %lld %lld",&num1,&num2,&kth);
+    value=power_num(num1,num2);
+    while(count!=kth)
+    {
+        ans=value%10;
+        previous=ans;
+        count++;
+        value/=10;
+    }
+    printf("%lld",previous);
+}
