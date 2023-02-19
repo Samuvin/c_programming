@@ -1,0 +1,27 @@
+#include<stdio.h>
+long long unique_factors(long long num)
+{
+    long long previous,divi=2;
+    previous=0;
+    while(num>1)
+    {
+        if(num%divi==0)
+        {
+            if(divi!=previous)
+            {
+                printf("%lld ",divi);
+                previous=divi;
+            }
+            num=num/divi;
+        }
+        else
+        divi++;
+    }
+    
+}
+int main()
+{
+    long long number;
+    scanf("%lld",&number);
+    unique_factors(number);
+}
