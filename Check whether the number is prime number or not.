@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+int isprime(long long int num)
+{
+    if (num<2) return 0;
+    if (num>=4 && (num%2==0 || num%3==0)) return 0;
+    if (num>=4 && ((num-1)%6!=0 && (num+1)%6!=0)) return 0;
+    long long int k=4, a=6*k+1, b=6*k-1, sqr=sqrt(num);// a=25 b=23 9
+    while (a<=sqr) // 25<=9
+    {
+        if (num%a==0 || num%b==0) return 0;
+        k++;
+        a=6*k+1;
+        b=6*k-1;
+    }
+    return 1;
+}
+int main()
+{
+    long long int a, i, flag;
+    scanf("%lld",&a);
+    int sqr=sqrt(a);
+    if(isprime(a))
+    {
+        printf("Yes");
+    }
+    else printf("No");
+}
