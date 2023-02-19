@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n1,n2,count1=1,count2=1;
+    scanf("%d %d",&n1,&n2);
+    int sqr1=sqrt(n1);
+    for (int x=2; x<=sqr1; x++)
+    {
+        if (n1%x==0)
+        {
+            count1=count1+x;
+            count1=count1+(n1/x);
+        }
+    }
+    int sqr2=sqrt(n2);
+    for (int i=2; i<=sqr2; i++)
+    {
+        if (n2%i==0)
+        {
+            count2=count2+i;
+            count2+count2+(n2/i);
+        }
+    }
+    n1=n1+1;
+    n2=n2+1;
+    ((count1)==(n2))&&((count1)==(n2))?printf("Yes"):printf("No");
+}
