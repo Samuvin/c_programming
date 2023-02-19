@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int num,count=1;
+    scanf("%d",&num);
+    int sqr=sqrt(num);
+    for (int i=2; i<=sqr; i++)
+    {
+        if(num%i==0)
+        {
+            count = count+i;
+            count = count+(num/i);
+        }
+    }
+    (count<num)?printf("Yes"):printf("No");
+}
