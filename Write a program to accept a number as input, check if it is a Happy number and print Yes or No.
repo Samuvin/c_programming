@@ -1,0 +1,24 @@
+#include<stdio.h>
+long long happy_number(long long num)
+{
+    int sum=0,digit;
+    while(num>9)
+    {
+        sum=0;
+        while(num>0)
+        {
+        digit=num%10;
+        sum=sum+digit*digit;
+        num=num/10;
+        }
+    num=sum;
+    }
+    return num;
+}
+int main()
+{
+    long long num,answer;
+    scanf("%lld",&num);
+    answer=happy_number(num);
+    (answer==1||answer==7)?printf("Yes"):printf("No");
+}
